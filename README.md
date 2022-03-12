@@ -67,7 +67,7 @@ The below "CREATE TABLE" statement was used to test/confirm the correct column d
     off_market_in_two_weeks_yoy double precision NULL,
     parent_metro_region varchar(50) NULL,
     parent_metro_region_metro_code integer NULL,
-    last_updated timestamp NULL) (edited) 
+    last_updated timestamp NULL);
 
 
 __Command line syntax to import test dataset__
