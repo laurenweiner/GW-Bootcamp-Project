@@ -7,6 +7,8 @@ __Sample Create Table statement__
 
 The below "CREATE TABLE" statement was used to test/confirm the correct column data type.  If the correct data type is NOT defined in the table, the import process will fail using the GUI or command line.
 
+  **CREATE DATABASE Final_Project;** -- Syntax to create Test database.
+
   **CREATE TABLE** county_market_tracker (
     period_begin date NULL,
     period_end date NULL,
