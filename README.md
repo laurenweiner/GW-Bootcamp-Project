@@ -70,5 +70,10 @@ The below "CREATE TABLE" statement was used to test/confirm the correct column d
 
 __Command line syntax to import test dataset__
 
+The below command will be used to import the "live" dataset into a PostgreSQL database table.
+
+**COPY** county_market_tracker
+**FROM** 'C:\temp\county_market_tracker.tsv000'
+**DELIMITER** E'\t' CSV HEADER;  -- \t is tab delimiter
 
 
