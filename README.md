@@ -1,4 +1,4 @@
-# Up and Coming Real Estate Market
+# Up and Coming Real Estate Market Hotspots
 
 ## Selected Topic:
 ### For our final project, our group will be creating a machine learning model that will predict the next up-and-coming cities in the US using historical housing market data from 2012 to 2021. 
