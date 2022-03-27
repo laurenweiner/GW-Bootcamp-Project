@@ -79,6 +79,7 @@ The below command will be used to import the "live" dataset into a PostgreSQL da
 **DELIMITER** E'\t' CSV HEADER;  -- \t is tab delimiter
 
 __SQL syntax to join two tabless which will be used to join the housing data in PostgreSQL__
+
 SELECT smt.*, 
 mpd.popestimate2010
 ,mpd.popestimate2011
@@ -86,7 +87,26 @@ mpd.popestimate2010
 INTO zzsample_table 
 FROM market_pop_data mpd
  JOIN state_market_tracker smt on mpd.state_name = smt.state_name;
+**
+**Python code to import sqlalchemy and connect to the AWS PostgreSQL database ****
 
+import sqlalchemy
+from sqlalchemy.ext.automap import automap_base
+from sqlalchemy.orm import Session
+
+from sqlalchemy import create_engine
+import pandas as pd
+import psycopg2
+
+#The below string will connect directly to 
+#db_string = f"postgresql://postgres:70IsGoodGolfM@@127.0.0.1:5432/zzsw"
+
+#The below string will connect directly to the AWS/RDS PostgreSQL database
+db_string = f"postgresql://postgres:XB0j1ma!17@housingdata.cng7z9pmjc4z.us-east-1.rds.amazonaws.com:5432/zzsw"
+
+engine = create_engine(db_string)
+
+conn = engine.connect()
 
 
 
