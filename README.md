@@ -78,4 +78,15 @@ The below command will be used to import the "live" dataset into a PostgreSQL da
 **FROM** 'C:\temp\county_market_tracker.tsv000'
 **DELIMITER** E'\t' CSV HEADER;  -- \t is tab delimiter
 
+__SQL syntax to join two tabless which will be used to join the housing data in PostgreSQL__
+SELECT smt.*, 
+mpd.popestimate2010
+,mpd.popestimate2011
+,mpd.popestimate2012
+INTO zzsample_table 
+FROM market_pop_data mpd
+ JOIN state_market_tracker smt on mpd.state_name = smt.state_name;
+
+
+
 
