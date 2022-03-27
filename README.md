@@ -3,6 +3,8 @@
 ## Database Resources
 PostgreSQL
 
+## Database testing peformed before executing against live data
+
 __Sample Create Table statement__
 
 The below "CREATE TABLE" statement was used to test/confirm the correct column data type.  If the correct data type is NOT defined in the table, the import process will fail using the GUI or command line.
@@ -77,6 +79,9 @@ The below command will be used to import the "live" dataset into a PostgreSQL da
 **COPY** county_market_tracker
 **FROM** 'C:\temp\county_market_tracker.tsv000'
 **DELIMITER** E'\t' CSV HEADER;  -- \t is tab delimiter
+
+
+# FINAL PROJECT - PART 2 - DUE 3/27/22  (Testing completing before executing against live data)
 
 __SQL syntax to join two tabless which will be used to join the housing data in PostgreSQL__
 
