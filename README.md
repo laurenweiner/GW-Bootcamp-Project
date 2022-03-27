@@ -98,10 +98,8 @@ from sqlalchemy import create_engine
 import pandas as pd
 import psycopg2
 
-#The below string will connect directly to 
-#db_string = f"postgresql://postgres:70IsGoodGolfM@@127.0.0.1:5432/zzsw"
-
 #The below string will connect directly to the AWS/RDS PostgreSQL database
+
 db_string = f"postgresql://postgres:XB0j1ma!17@housingdata.cng7z9pmjc4z.us-east-1.rds.amazonaws.com:5432/zzsw"
 
 engine = create_engine(db_string)
