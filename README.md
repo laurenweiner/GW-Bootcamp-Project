@@ -112,7 +112,7 @@ engine = create_engine(db_string)
 
 conn = engine.connect()
 
-# FINAL PROJECT - PART 3 - DUE 4/3/22  (Testing Heroku using Pets example)
+# FINAL PROJECT - PART 3 - DUE 4/3/22  (Pushing application online Testing using Heroku.  Pushed Pet Pal application online for testing.)
 
 This testing will eventually help with developing and implementing our online application.
 
