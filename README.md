@@ -81,7 +81,7 @@ The below command will be used to import the "live" dataset into a PostgreSQL da
 **DELIMITER** E'\t' CSV HEADER;  -- \t is tab delimiter
 
 
-# FINAL PROJECT - PART 2 - DUE 3/27/22  (Testing completing before executing against live data)
+# FINAL PROJECT - PART 2 - DUE 3/27/22  (Testing completed before executing against live data)
 
 __SQL syntax to join two tabless which will be used to join the housing data in PostgreSQL__
 
@@ -111,6 +111,16 @@ db_string = f"postgresql://postgres:{pwstring}@housingdata.cng7z9pmjc4z.us-east-
 engine = create_engine(db_string)
 
 conn = engine.connect()
+
+# FINAL PROJECT - PART 3 - DUE 4/3/22  (Testing Heroku using Pets example)
+
+This testing will eventually help with developing and implementing our online application.
+
+Successful implementation of the Pets application online can be viewed from the below link.
+
+[Pet Pal -TEST](https://pet-pals-class-2022.herokuapp.com/)
+
+
 
 
 
