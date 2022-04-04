@@ -53,4 +53,4 @@
 	  * median_list_ppsf_yoy double precision NULL) 
 
 ### Once our tables were importing to PG Admin, we joined our market datasets with census population data. Our analysis aims to identify future lucrative housing markets by location and population growth is an important factor in that anlysis.
-![Postgres](https://github.com/laurenweiner/GW-Bootcamp-Project/blob/brian/State%20Market%20Data%20Cleanup.PNG)
+![Postgres](https://github.com/laurenweiner/GW-Bootcamp-Project/blob/brian/Postgres%20-%20Table%20Join.PNG)
