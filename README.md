@@ -21,4 +21,4 @@
 
 ## Data Cleanup and Analysis
 ### Our team used a number of tool to clean up our datasets, create database connections, and visualize our findings. Our primary tool  for data cleanup was Jupyter notebook. After importing our CSV files, our team removed unneccessary fields, removed null values, and grouped our data by location and year. 
-![Jupyter]
+![Jupyter](https://github.com/laurenweiner/GW-Bootcamp-Project/blob/brian/State%20Market%20Data%20Cleanup.PNG)
