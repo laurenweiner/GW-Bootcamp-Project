@@ -18,3 +18,7 @@
 ###   3. Do the number of homes sold mean that the properties are in more demand or that the people living there are trying harder to leave?
 
 ### Finally, based on the above hypotheses what other data points could we potentially incorporate? Should we incorporate census data to see if there’s an inflow and outflow of people from one state to another? Should we see if there’s just a surge of wealthy individuals that happen to move into an area causing a drastic increase in sale prices? At the moment this is still something we are working on.
+
+## Data Cleanup and Analysis
+### Our team used a number of tool to clean up our datasets, create database connections, and visualize our findings. Our primary tool  for data cleanup was Jupyter notebook. After importing our CSV files, our team removed unneccessary fields, removed null values, and grouped our data by location and year. 
+![Jupyter]
