@@ -19,7 +19,7 @@
 
 ### Finally, based on the above hypotheses what other data points could we potentially incorporate? Should we incorporate census data to see if there’s an inflow and outflow of people from one state to another? Should we see if there’s just a surge of wealthy individuals that happen to move into an area causing a drastic increase in sale prices? At the moment this is still something we are working on.
 
-## Data Cleanup and Analysis
+## Data Cleanup
 ### Our team used a number of tool to clean up our datasets, create database connections, and visualize our findings. Our primary tool  for data cleanup was Jupyter notebook. After importing our CSV files, our team removed unneccessary fields, removed null values, and grouped our data by location and year. 
 ![Jupyter](https://github.com/laurenweiner/GW-Bootcamp-Project/blob/brian/State%20Market%20Data%20Cleanup.PNG)
 
@@ -54,3 +54,8 @@
 
 ### Once our tables were importing to PG Admin, we joined our market datasets with census population data. Our analysis aims to identify future lucrative housing markets by location and population growth is an important factor in that anlysis.
 ![Postgres](https://github.com/laurenweiner/GW-Bootcamp-Project/blob/brian/Postgres%20-%20Table%20Join.PNG)
+
+## Analysis
+
+## Data Visualization
+### Our team used Tableau to visualize our findings. The link to the story can be found [here](https://public.tableau.com/app/profile/lauren.weiner/viz/GWDataAnalyticsBootcampProjectDraft/Story1).
