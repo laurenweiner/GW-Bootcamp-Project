@@ -22,3 +22,32 @@
 ## Data Cleanup and Analysis
 ### Our team used a number of tool to clean up our datasets, create database connections, and visualize our findings. Our primary tool  for data cleanup was Jupyter notebook. After importing our CSV files, our team removed unneccessary fields, removed null values, and grouped our data by location and year. 
 ![Jupyter](https://github.com/laurenweiner/GW-Bootcamp-Project/blob/brian/State%20Market%20Data%20Cleanup.PNG)
+
+### After our datasets had been properly cleaned, our team utilized AWS and PG Admin to establish a database structure that would be used for our final project. We created tables using an SQL query similar to the one below, assigning the proper data types prior to importing our cleaned CSV files.
+
+* CREATE TABLE county_market_tracker (
+    * period_begin date NULL,
+	  * period_end date NULL,
+	  * period_duration integer NULL,
+	  * region_type varchar(50) NULL,
+	  * region_type_id varchar(50) NULL,
+	  * table_id varchar(50) NULL,
+	  * is_seasonally_adjusted char(1) NULL,
+	  * region varchar(50) NULL,
+	  * city varchar(50) NULL,
+	  * state varchar(50) NULL,
+	  * state_code char(2) NULL,
+	  * property_type varchar(50) NULL,
+	  * property_type_id varchar(50) NULL,
+	  * median_sale_price double precision NULL,
+	  * median_sale_price_mom double precision NULL,
+	  * median_sale_price_yoy double precision NULL,
+	  * median_list_price double precision NULL,
+	  * median_list_price_mom double precision NULL,
+	  * median_list_price_yoy double precision NULL,
+	  * median_ppsf double precision NULL,
+	  * median_ppsf_mom double precision NULL,
+	  * median_ppsf_yoy double precision NULL,
+	  * median_list_ppsf double precision NULL,
+	  * median_list_ppsf_mom double precision NULL,
+	  * median_list_ppsf_yoy double precision NULL) 
