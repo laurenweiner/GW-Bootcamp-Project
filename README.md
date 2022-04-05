@@ -49,4 +49,5 @@ Using the model, predicted population of 2022 in each states.
 
 Sorted them by percentage increse in each city (2022)
 ![](https://user-images.githubusercontent.com/64121596/161860934-e7740d2e-cd28-4f0b-b9bc-3e28a9943db8.png)
-![]()
+ top 10 city by Predicted percentage increase in 2022: 
+![](https://user-images.githubusercontent.com/64121596/161861116-9423358c-28da-48eb-a617-d103a2007225.png)
