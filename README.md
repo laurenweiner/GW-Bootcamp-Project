@@ -58,4 +58,18 @@
 ## Analysis
 
 ## Data Visualization
+
+## Machine Learning
+### ETL
+
+"market_pop_data" has 470 rows and 21 columns. Columns names are: 
+['state_name', 'year_data', 'median_sale_price', 'median_list_price',
+       'homes_sold', 'new_listings', 'inventory', 'avg_sale_to_list',
+       'sold_above_list', 'popestimate2010', 'popestimate2011',
+       'popestimate2012', 'popestimate2013', 'popestimate2014',
+       'popestimate2015', 'popestimate2016', 'popestimate2017',
+       'popestimate2018', 'popestimate2019', 'popestimate2020',
+       'popestimate2021']
+please refer to the jupyter notebook [link](https://github.com/laurenweiner/GW-Bootcamp-Project/blob/oyuka/LinearRegression_populationPredict.ipynb).
+
 ### Our team used Tableau to visualize our findings. The link to the story can be found [here](https://public.tableau.com/app/profile/lauren.weiner/viz/GWDataAnalyticsBootcampProjectDraft/Story1).
