@@ -1,0 +1,77 @@
+CREATE TABLE state_population_data (
+	State_Name varchar,
+	POPESTIMATE2010 double precision,
+	POPESTIMATE2011 double precision,
+	POPESTIMATE2012 double precision,
+	POPESTIMATE2013 double precision,
+	POPESTIMATE2014 double precision,
+	POPESTIMATE2015 double precision,
+	POPESTIMATE2016 double precision,
+	POPESTIMATE2017 double precision,
+	POPESTIMATE2018 double precision,
+	POPESTIMATE2019 double precision,
+	POPESTIMATE2020 double precision,
+	POPESTIMATE2021 double precision);
+
+SELECT * FROM state_population_data;
+
+SELECT * FROM metro_market_tracker;
+
+DROP TABLE state_population_data;
+
+DROP TABLE state_market_tracker;
+
+CREATE TABLE state_market_tracker (
+	State_Name varchar,
+	year_data char(4),
+	median_sale_price double precision,
+	median_list_price double precision,
+	homes_sold double precision,
+	new_listings double precision,
+	inventory double precision,
+	avg_sale_to_list double precision,
+	sold_above_list double precision);
+	
+SELECT * FROM state_market_tracker;
+
+CREATE TABLE metro_market_tracker (
+	State_Name varchar,
+	year_data char(4),
+	median_sale_price double precision,
+	median_list_price double precision,
+	homes_sold double precision,
+	new_listings double precision,
+	inventory double precision,
+	avg_sale_to_list double precision,
+	sold_above_list double precision);
+	
+DROP TABLE metro_market_tracker;
+
+-- JOIN TEST
+select smt.state_name, smt.year_data, spd.popestimate2010
+from public.state_market_tracker smt
+LEFT JOIN state_population_data spd
+	ON (smt.state_name = spd.state_name)
+
+CREATE 
+
+SELECT state_market_tracker.*,
+state_population_data.popestimate2010
+, popestimate2011
+, popestimate2012
+, popestimate2013
+, popestimate2014
+, popestimate2015
+, popestimate2016
+, popestimate2017
+, popestimate2018
+, popestimate2019
+, popestimate2020
+, popestimate2021
+,
+INTO st_market_pop_data
+from state_market_tracker
+LEFT JOIN state_population_data
+	ON (state_market_tracker.state_name = state_population_data.state_name)
+	
+SELECT * FROM st_market_pop_data;

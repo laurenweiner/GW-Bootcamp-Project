@@ -1,0 +1,6 @@
+SELECT * FROM housing_data_tracker;
+
+SELECT
+	state_code,
+	property_type
+FROM housing_data_tracker;

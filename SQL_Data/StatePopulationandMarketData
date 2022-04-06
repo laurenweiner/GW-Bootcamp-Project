@@ -1,0 +1,8 @@
+SELECT state_market_tracker.*, state_population_data.popestimate2010, state_population_data.popestimate2011, state_population_data.popestimate2012, state_population_data.popestimate2013, state_population_data.popestimate2014, state_population_data.popestimate2015, state_population_data.popestimate2016, state_population_data.popestimate2017, state_population_data.popestimate2018, state_population_data.popestimate2019, state_population_data.popestimate2020, state_population_data.popestimate2021
+INTO market_pop_data
+FROM state_market_tracker
+LEFT JOIN state_population_data ON (state_market_tracker.state_name = state_population_data.state_name);
+
+SELECT * FROM market_pop_data;
+
+SELECT * FROM state_market_tracker;
