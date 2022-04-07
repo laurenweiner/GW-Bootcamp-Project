@@ -59,17 +59,72 @@
 
 ## Data Visualization
 
-## Machine Learning
-### ETL
+# Machine Learning Model to predict the "On demand" cities and states 
+### ETL :
+Columns Overview (21):
+-  'state_name':
+    47 states
+-  'year_data':
+    2012 - 2021
+-  'median_sale_price':
+-  ![](https://user-images.githubusercontent.com/64121596/161854187-4f1a1d27-21fa-443c-8738-817ec0b17543.png)  ![](https://user-images.githubusercontent.com/64121596/161855852-8aa9388d-49cb-4502-8094-6231dbbe47f2.png)
+-  'median_list_price':
+- ![](https://user-images.githubusercontent.com/64121596/161854444-93188520-bc06-4326-8bc1-61ce94638492.png). ![](https://user-images.githubusercontent.com/64121596/161856003-04822dab-ee44-4182-bd51-586d576ada6c.png)
+-  'homes_sold':
+-  ![](https://user-images.githubusercontent.com/64121596/161854630-910e64d7-4aa8-45c5-a4ff-3aa648931135.png) ![](https://user-images.githubusercontent.com/64121596/161856096-e8b40669-88ce-4c65-85e3-8beb61c985ed.png)
+-  'inventory': 
+-  ![](https://user-images.githubusercontent.com/64121596/161854749-a9e1cf1d-1b03-4bd7-8747-e28263097e39.png) ![](https://user-images.githubusercontent.com/64121596/161855680-9defadb4-a3be-4584-b713-d61efc809dea.png)
+-  'new_listings': 
+-  ![](https://user-images.githubusercontent.com/64121596/161854833-00df5dca-2af4-4c8e-9326-370ad1906e1b.png) ![](https://user-images.githubusercontent.com/64121596/161856807-cf74d674-bea8-4a99-b170-0aec91f66c10.png)
+-  'avg_sale_to_list':
+-  ![](https://user-images.githubusercontent.com/64121596/161854956-45eb66da-85df-413e-a8d6-4964b1d7a57c.png) ![](https://user-images.githubusercontent.com/64121596/161856888-d4b8223f-3e16-496c-9390-eb379f091903.png)
+-  'sold_above_list':
+-  ![](https://user-images.githubusercontent.com/64121596/161855085-a6d51af0-06c0-48cb-8bc1-846d36b6f8cb.png) ![](https://user-images.githubusercontent.com/64121596/161857028-178f7380-d987-4a67-ae98-024ba8f76527.png)
+-  population estimates from 2010 to 2021 (12 columns)
+ 
+# Machine Learning
+:dart: Target: population estimate 2021
 
-"market_pop_data" has 470 rows and 21 columns. Columns names are: 
-['state_name', 'year_data', 'median_sale_price', 'median_list_price',
-       'homes_sold', 'new_listings', 'inventory', 'avg_sale_to_list',
-       'sold_above_list', 'popestimate2010', 'popestimate2011',
-       'popestimate2012', 'popestimate2013', 'popestimate2014',
-       'popestimate2015', 'popestimate2016', 'popestimate2017',
-       'popestimate2018', 'popestimate2019', 'popestimate2020',
-       'popestimate2021']
+:heavy_check_mark: Variables: other columns excluding the Target
+
+1. Dropped the outlier from population 2021 estimate. Dropped "California".
+Population Estimate 2021 histogram:
+![](https://user-images.githubusercontent.com/64121596/161857409-5767c389-6e50-465a-9902-7340727b5823.png)
+2. Using Standard Scaler, Scaled all the data. (Target and variables)
+3. Split the data to training vs test 75 vs 25
+4. Resampled the data using SMOTE algorithm
+5. Used Linear Regression to predict the :dart: Target. 
+### Our Linear Regression Model Metrics:
+- 💠 MRE: 39690.7044723
+- 💠  R2 test: 0.99991645029
+- 💠  R2 train: 0.9999204638
+- 💠 R2 weighted: 0.99991645029
+Using the model, predicted population of 2022 in each states. 
+
+## Cross Validation
+![](https://user-images.githubusercontent.com/64121596/162147864-d9429140-1e4e-460c-948c-52e81213fc90.png)
+Fitting 5 folds for each of 19 candidates, totalling 95 fits
+GridSearchCV(cv=KFold(n_splits=5, random_state=100, shuffle=True),
+             estimator=RFE(estimator=LinearRegression()),
+             param_grid=[{'n_features_to_select': [1, 2, 3, 4, 5, 6, 7, 8, 9,
+                                                   10, 11, 12, 13, 14, 15, 16,
+                                                   17, 18, 19]}],
+             return_train_score=True, scoring='r2', verbose=1)
+             
+
+![](https://user-images.githubusercontent.com/64121596/162149684-7b299c28-3e62-4dfb-af0f-fed04d60da77.png)
+
+
+Then we looked at the feature importance:
+![](https://user-images.githubusercontent.com/64121596/162149855-2be00dbe-8140-410f-b91f-63a2512e5e11.png)
+
+This means we could predict the population 2022 by the first 5 population yearly data.
+
+- Sorted them by percentage increse in each city (2022)
+![](https://user-images.githubusercontent.com/64121596/161860934-e7740d2e-cd28-4f0b-b9bc-3e28a9943db8.png)
+ top 10 city by Predicted percentage increase in 2022: 
+![](https://user-images.githubusercontent.com/64121596/161861257-bd09a998-86ec-492c-93fb-a6e5b83af20a.png)
+
 please refer to the jupyter notebook [link](https://github.com/laurenweiner/GW-Bootcamp-Project/blob/oyuka/LinearRegression_populationPredict.ipynb).
 
 ### Our team used Tableau to visualize our findings. The link to the story can be found [here](https://public.tableau.com/app/profile/lauren.weiner/viz/GWDataAnalyticsBootcampProjectDraft/Story1).
