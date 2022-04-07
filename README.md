@@ -150,12 +150,7 @@ GridSearchCV(cv=KFold(n_splits=5, random_state=100, shuffle=True),
              param_grid=[{'n_features_to_select': [1, 2, 3, 4, 5, 6]}],
              return_train_score=True, scoring='r2', verbose=1)
 	     ![](https://user-images.githubusercontent.com/64121596/162160498-2cb06021-b711-4ad7-a438-fba538760e4b.png)
-	mean_test_score	std_test_score	mean_train_score  std_train_score
-0	0.464556	0.020064	0.466001	0.005286
-1	0.483403	0.023450	0.485148	0.006174
-2	0.490303	0.020781	0.492619	0.005462
-3	0.492010	0.021562	0.494530	0.005722
-4	0.491642	0.021211	0.494676	0.005681
+![](https://user-images.githubusercontent.com/64121596/162160712-d2c054f8-d54a-4d22-809f-2dcf4bd97ce6.png)
 
 Final model by using 3 features:
 R2 is 56%.
