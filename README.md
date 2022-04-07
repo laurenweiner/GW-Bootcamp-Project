@@ -120,9 +120,9 @@ Then we looked at the feature importance:
 
 This means we could predict the population 2022 by the first 5 population yearly data.
 
-- Sorted them by percentage increse in each city (2022)
+- Top 10 predicted highest increse in each city (2022)
 ![](https://user-images.githubusercontent.com/64121596/161860934-e7740d2e-cd28-4f0b-b9bc-3e28a9943db8.png)
- top 10 city by Predicted percentage increase in 2022: 
+- top 10 city by Predicted percentage increase in 2022: 
 ![](https://user-images.githubusercontent.com/64121596/161861257-bd09a998-86ec-492c-93fb-a6e5b83af20a.png)
 
 please refer to the jupyter notebook [link](https://github.com/laurenweiner/GW-Bootcamp-Project/blob/oyuka/LinearRegression_populationPredict.ipynb).
