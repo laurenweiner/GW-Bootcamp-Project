@@ -26,9 +26,8 @@ Columns Overview (21):
 -  'sold_above_list':
 -  ![](https://user-images.githubusercontent.com/64121596/161855085-a6d51af0-06c0-48cb-8bc1-846d36b6f8cb.png) ![](https://user-images.githubusercontent.com/64121596/161857028-178f7380-d987-4a67-ae98-024ba8f76527.png)
 -  population estimates from 2010 to 2021 (12 columns)
--  
  
-### Machine Learning
+# Machine Learning
 :dart: Target: population estimate 2021
 
 :heavy_check_mark: Variables: other columns excluding the Target
@@ -41,12 +40,30 @@ Population Estimate 2021 histogram:
 4. Resampled the data using SMOTE algorithm
 5. Used Linear Regression to predict the :dart: Target. 
 ### Our Linear Regression Model Metrics:
-💠 MRE: 39690.7044723
-💠  R2 test: 0.99991645029
-💠  R2 train: 0.9999204638
-💠 R2 weighted: 0.99991645029
+- 💠 MRE: 39690.7044723
+- 💠  R2 test: 0.99991645029
+- 💠  R2 train: 0.9999204638
+- 💠 R2 weighted: 0.99991645029
 Using the model, predicted population of 2022 in each states. 
 
+## Cross Validation
+![](https://user-images.githubusercontent.com/64121596/162147864-d9429140-1e4e-460c-948c-52e81213fc90.png)
+Fitting 5 folds for each of 19 candidates, totalling 95 fits
+GridSearchCV(cv=KFold(n_splits=5, random_state=100, shuffle=True),
+             estimator=RFE(estimator=LinearRegression()),
+             param_grid=[{'n_features_to_select': [1, 2, 3, 4, 5, 6, 7, 8, 9,
+                                                   10, 11, 12, 13, 14, 15, 16,
+                                                   17, 18, 19]}],
+             return_train_score=True, scoring='r2', verbose=1)
+             
+
+![](https://user-images.githubusercontent.com/64121596/162149684-7b299c28-3e62-4dfb-af0f-fed04d60da77.png)
+
+
+Then we looked at the feature importance:
+![](https://user-images.githubusercontent.com/64121596/162149855-2be00dbe-8140-410f-b91f-63a2512e5e11.png)
+
+This means we could predict the population 2022 by the first 5 population yearly data.
 Sorted them by percentage increse in each city (2022)
 ![](https://user-images.githubusercontent.com/64121596/161860934-e7740d2e-cd28-4f0b-b9bc-3e28a9943db8.png)
  top 10 city by Predicted percentage increase in 2022: 
