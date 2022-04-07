@@ -82,7 +82,7 @@ Columns Overview (21):
 -  ![](https://user-images.githubusercontent.com/64121596/161855085-a6d51af0-06c0-48cb-8bc1-846d36b6f8cb.png) ![](https://user-images.githubusercontent.com/64121596/161857028-178f7380-d987-4a67-ae98-024ba8f76527.png)
 -  population estimates from 2010 to 2021 (12 columns)
  
-# Machine Learning
+## Machine Learning on Population Prediction
 :dart: Target: population estimate 2021
 
 :heavy_check_mark: Variables: other columns excluding the Target
@@ -101,7 +101,7 @@ Population Estimate 2021 histogram:
 - 💠 R2 weighted: 0.99991645029
 Using the model, predicted population of 2022 in each states. 
 
-## Cross Validation
+### Cross Validation
 ![](https://user-images.githubusercontent.com/64121596/162147864-d9429140-1e4e-460c-948c-52e81213fc90.png)
 Fitting 5 folds for each of 19 candidates, totalling 95 fits
 GridSearchCV(cv=KFold(n_splits=5, random_state=100, shuffle=True),
@@ -126,5 +126,38 @@ This means we could predict the population 2022 by the first 5 population yearly
 ![](https://user-images.githubusercontent.com/64121596/161861257-bd09a998-86ec-492c-93fb-a6e5b83af20a.png)
 
 please refer to the jupyter notebook [link](https://github.com/laurenweiner/GW-Bootcamp-Project/blob/oyuka/LinearRegression_populationPredict.ipynb).
+## Multiple Regression on sold_above_list
+Then we looked at the other variables since we predicted the highest growing states in the next year. 
+![](https://user-images.githubusercontent.com/64121596/162151622-f95632bd-86d6-4cf5-adf6-ae54cd2bb848.png)
+   Other than the median price sold, if we look at the homes sold numbers. It was highly correlated to inventory and the number of new listings in the area. 
 
+To predict the sold_above_list
+1. Cleaned the dataset by droping NAs, dropin duplicates, set the index as state_name (object).
+2. Dropped the outlier. Median Sale price highest city : "Nevada nonmetropolitan area"
+3. 🎯 target: sold_above_list
+📎 variables : year_data, median_sale_price, median_list_price, homes_sold, avg_sale_to_list
+	- Did not use inventory and new listings columns because these 2 are highly correlated with homes_sold.
+4. Normalized the data by using Standard Scaler
+5. Split the dataset by training and test. 
+6. Our Regression model metrics:
+MRE: 0.05940403316904764
+R2 test: 0.5704715858517697
+R2_train: 0.483487561943463
+R2 weighted: 0.5704715858517697
+7. Fitting 5 folds for each of 6 candidates, totalling 30 fits
+GridSearchCV(cv=KFold(n_splits=5, random_state=100, shuffle=True),
+             estimator=RFE(estimator=LinearRegression()),
+             param_grid=[{'n_features_to_select': [1, 2, 3, 4, 5, 6]}],
+             return_train_score=True, scoring='r2', verbose=1)
+	     ![](https://user-images.githubusercontent.com/64121596/162160498-2cb06021-b711-4ad7-a438-fba538760e4b.png)
+	mean_test_score	std_test_score	mean_train_score  std_train_score
+0	0.464556	0.020064	0.466001	0.005286
+1	0.483403	0.023450	0.485148	0.006174
+2	0.490303	0.020781	0.492619	0.005462
+3	0.492010	0.021562	0.494530	0.005722
+4	0.491642	0.021211	0.494676	0.005681
+
+Final model by using 3 features:
+R2 is 56%.
+please refer to the jupyter notebook [link](https://github.com/laurenweiner/GW-Bootcamp-Project/blob/oyuka/metro_market_tracker.ipynb)
 ### Our team used Tableau to visualize our findings. The link to the story can be found [here](https://public.tableau.com/app/profile/lauren.weiner/viz/GWDataAnalyticsBootcampProjectDraft/Story1).
