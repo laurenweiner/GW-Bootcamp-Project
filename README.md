@@ -64,7 +64,8 @@ Then we looked at the feature importance:
 ![](https://user-images.githubusercontent.com/64121596/162149855-2be00dbe-8140-410f-b91f-63a2512e5e11.png)
 
 This means we could predict the population 2022 by the first 5 population yearly data.
-Sorted them by percentage increse in each city (2022)
+
+- Sorted them by percentage increse in each city (2022)
 ![](https://user-images.githubusercontent.com/64121596/161860934-e7740d2e-cd28-4f0b-b9bc-3e28a9943db8.png)
  top 10 city by Predicted percentage increase in 2022: 
 ![](https://user-images.githubusercontent.com/64121596/161861257-bd09a998-86ec-492c-93fb-a6e5b83af20a.png)
