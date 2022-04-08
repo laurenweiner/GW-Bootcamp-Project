@@ -121,6 +121,9 @@ Successful implementation of the Pets application online can be viewed from the 
 [Pet Pal -TEST](https://pet-pals-class-2022.herokuapp.com/)
 
 
+Successfully implemented Next Big City in Heroku.
+
 [The Next Big City](https://final-gw-heroku.herokuapp.com/)
 
+Issues:  Working with dash and flask.  Difficulty in publishing to Heroku.
 
